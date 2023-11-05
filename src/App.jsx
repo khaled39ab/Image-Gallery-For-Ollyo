@@ -16,47 +16,47 @@ function App() {
 
   const imageInfo = [
     {
-      _id: 1,
+      id: 1,
       img: img1
     },
     {
-      _id: 2,
+      id: 2,
       img: img2
     },
     {
-      _id: 3,
+      id: 3,
       img: img3
     },
     {
-      _id: 4,
+      id: 4,
       img: img4
     },
     {
-      _id: 5,
+      id: 5,
       img: img5
     },
     {
-      _id: 6,
+      id: 6,
       img: img6
     },
     {
-      _id: 7,
+      id: 7,
       img: img7
     },
     {
-      _id: 8,
+      id: 8,
       img: img8
     },
     {
-      _id: 9,
+      id: 9,
       img: img9
     },
     {
-      _id: 10,
+      id: 10,
       img: img10
     },
     {
-      _id: 11,
+      id: 11,
       img: img11
     },
   ]

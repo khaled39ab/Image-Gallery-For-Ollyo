@@ -2,10 +2,7 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { Checkbox } from "@nextui-org/react";
 
-const SortableImage = (props) => {
-    
-    const { handleChecked, index, image} = props;
-
+const SortableImage = ({ handleChecked, index, image } ) => {
 
     const {
         attributes,
@@ -13,7 +10,7 @@ const SortableImage = (props) => {
         setNodeRef,
         transform,
         transition
-    } = useSortable({ id: props.image.id });
+    } = useSortable({ id: image.id });
 
     const style = {
         transition: transition || undefined,
@@ -23,8 +20,7 @@ const SortableImage = (props) => {
         width: `${index === 0 ? "350px" : "200px"}`,
         gridColumn: `${index === 0 ? "1 / span 2" : ""}`,
         gridRow: `${index === 0 ? "1 / span 2" : ""}`,
-
-    }
+    };
 
     return (
         <div
@@ -32,12 +28,11 @@ const SortableImage = (props) => {
             ref={setNodeRef}
             {...attributes}
             {...listeners}
+            className="hover:bg-black hover:bg-opacity-30"
         >
-            {/* <input className={`scale-125 absolute ml-4 mt-4  imgCheck `} type="checkbox" value={image.id} onChange={handleChecked} /> */}
-            <Checkbox  className={`scale-125 absolute ml-4 mt-4  imgCheck `}  onChange={handleChecked} name={image.id}
-            id={image.id} size="md" color="primary"></Checkbox>
+            <Checkbox className={`scale-125 absolute ml-4 mt-4`} value={image.id} onChange={handleChecked} size="md" color="primary"></Checkbox>
             <img className="rounded-lg" src={image.img} alt={`image${image.id}`} />
-        </div> 
+        </div>
     );
 };
 

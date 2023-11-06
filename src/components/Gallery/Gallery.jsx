@@ -14,7 +14,7 @@ const Gallery = ({ imageInfo }) => {
 
     const handleChecked = (e) => {
         const { value, checked } = e.target;
-        // console.log(value, checked);
+        
         const getValue = images.find(data => data.id == value)
 
         if (checked) {
@@ -69,10 +69,6 @@ const Gallery = ({ imageInfo }) => {
                                     image={image}
                                     handleChecked={handleChecked}
                                     index={index}
-                                    images={images}
-                                    setCheckedValue={setCheckedValue}
-                                    itemCount={itemCount}
-                                    setItemCount={setItemCount}
                                 ></SortableImage>
                             )
                             )
